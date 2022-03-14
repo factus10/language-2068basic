@@ -1,16 +1,15 @@
-# Atom syntax highlighting for TRS-80 Extended Color Basic 2.1
+# Atom syntax highlighting for Timex/Sinclair 2068 Basic
 
-Based on Steven J. Syrek Atom BASIC syntax highlighting for the Commodore 64, this version is customized to be used with Extended Color BASIC for the TRS-80 Color Computer.
+Based on Steven J. Syrek Atom BASIC syntax highlighting for the Commodore 64 and Paulo Garcia's Atom syntax highlighting for TRS-80 Extended Color Basic 2.1, this version is customized to be used with Timex/Sinclair 2068 BASIC.
 
-This syntax highlighter supports the BASIC available in the Color Computer 3 (which includes commands like HCOLOR, HPAINT, etc...). It should work just fine with CoCo 1 and Coco 2 BASIC as well.
-
-Contributions welcome if you seriously think this is worth extending any further!
+This syntax highlighter supports the BASIC available in the Timex/Sinclair 2068.
 
 ### License (ISC)
 
-Copyright (c) 2017, Paulo Garcia <pedgarcia@gmail.com>
+Copyright (c) 2022, David Anderson <factus10@gmail.com>
 
-Based on Steven J. Syrek project for Commodore BASIC support for Atom Editor
+Based on Steven J. Syrek project for Commodore BASIC support for Atom Editor and 
+Paulo Garcia's Atom syntax highlighting for TRS-80 Extended Color Basic 2.1.
 
 Permission to use, copy, modify, and/or distribute this software for any purpose
 with or without fee is hereby granted, provided that the above copyright notice

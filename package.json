@@ -1,25 +1,25 @@
 {
-  "name": "language-cocobasic",
+  "name": "language-2068basic",
   "version": "0.1.0",
-  "description": "TRS-80 Extended Color BASIC language support in Atom",
-  "author": "Paulo Garcia <pedgarcia@gmail.com>",
+  "description": "Timex/Sinclair 2068 BASIC language support in Atom",
+  "author": "David Anderson <factus10@gmail.com>",
   "license": "ISC",
   "homepage": "https://atom.io/packages/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pedgarcia/language-cocobasic.git"
+    "url": "https://github.com/factus10/language-2068basic.git"
   },
   "bugs": {
-    "url": "https://github.com/pedgarcia/language-cocobasic/issues"
+    "url": "https://github.com/factus10/language-2068basic/issues"
   },
   "keywords": [
     "Atom",
     "package",
     "language",
     "basic",
-    "trs-80",
-    "coco",
-    "ecb",
+    "timex",
+    "2068",
+    "sinclair",
     "syntax",
     "highlight"
   ],

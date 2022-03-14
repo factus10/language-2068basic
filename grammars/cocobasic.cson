@@ -1,580 +1,419 @@
-'scopeName': 'source.cocobasic'
-'name': 'TRS-80 Extended Color Basic'
+'scopeName': 'source.ts2068basic'
+'name': 'Timex/Sinclair 2068 Basic'
 'fileTypes': ['bas', 'basic']
 'patterns': [
   { # lines that do not begin with a line number are marked invalid
     'match': '^\\D+'
-    'name': 'invalid.illegal.cocobasic'
+    'name': 'invalid.illegal.ts2068basic'
   }
   { # numeric constants, which may include scientific notation
     'match': '(^\\d+)|(\\b(([0-9]+(\\.|\\s*E\\s*)?[0-9]*)|(\\.[0-9]+))\\b)'
     'captures':
       '1':
-        'name': 'markup.bold.cocobasic'
+        'name': 'markup.bold.ts2068basic'
       '2':
-        'name': 'constant.numeric.cocobasic'
-    'name': 'meta.constant.cocobasic'
+        'name': 'constant.numeric.ts2068basic'
+    'name': 'meta.constant.ts2068basic'
   }
   { # strings
     'match': '(")([^"]*(")|.*\\n|.*$)'
     'captures':
       '1':
-        'name': 'punctuation.definition.string.begin.cocobasic'
+        'name': 'punctuation.definition.string.begin.ts2068basic'
       '2':
-        'name': 'string.quoted.double.cocobasic'
+        'name': 'string.quoted.double.ts2068basic'
       '3':
-        'name': 'punctuation.definition.string.begin.cocobasic'
-    'name': 'meta.string.quoted.double.cocobasic'
+        'name': 'punctuation.definition.string.begin.ts2068basic'
+    'name': 'meta.string.quoted.double.ts2068basic'
   }
   { # operators
     'match': ':|;|=|\\+|-|\\*|/|\\^|\\?|!|\\[|\\]|"|&|<|>|\\\\|@|_'
-    'name': 'keyword.operator.cocobasic'
+    'name': 'keyword.operator.ts2068basic'
   }
 # { # functions
 #   'match': '\\b([A-Z]+\\$?)\\s*\\([^)]+\\)'
 #   'captures':
 #     '1':
-#       'name': 'entity.name.function.cocobasic'
+#       'name': 'entity.name.function.ts2068basic'
 # }
   { # functions without arguments are invalid
     'match': '\\b([A-Z]+\\$?)\\s*\\(\\)'
-    'name': 'invalid.illegal.cocobasic'
-  }
-  { # RGB parameter
-    'match': '\\b(RGB)\\b'
-    'name': 'markup.bold.cocobasic'
-  }
-  { # CMP parameter
-    'match': '\\b(CMP)\\b'
-    'name': 'markup.bold.cocobasic'
-  }
-  { # RGB function
-    'match': '\\b(RGB)\\b'
-    'name': 'markup.bold.cocobasic'
+    'name': 'invalid.illegal.ts2068basic'
   }
   { # ABS function
     'match': '\\b(ABS)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
+  }
+  { # ACS function
+    'match': '\\b(ACS)\\b'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # AND operator
     'match': '\\b(AND)'
-    'name': 'keyword.operator.cocobasic'
+    'name': 'keyword.operator.ts2068basic'
   }
-  { # ASC function
-    'match': '\\b(ASC)\\b'
-    'name': 'entity.name.function.cocobasic'
+  { # ABS function
+    'match': '\\b(ABS)\\b'
+    'name': 'entity.name.function.ts2068basic'
+  }
+  { # ASN function
+    'match': '\\b(ASN)\\b'
+    'name': 'entity.name.function.ts2068basic'
+  }
+  { # AT command
+    'match': '\\b(AT)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # ATN function
     'match': '\\b(ATN)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # ATTR command
-    'match': '\\b(ATTR)'
-    'name': 'keyword.control.cocobasic'
+  { # ATTR function
+    'match': '\\b(ATTR)\\b'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # AUDIO command
-    'match': '\\b(AUDIO)'
-    'name': 'keyword.control.cocobasic'
+  { # BEEP command
+    'match': '\\b(BEEP)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # BUTTON function
-    'match': '\\b(BUTTON)\\b'
-    'name': 'entity.name.function.cocobasic'
+  { # BORDER command
+    'match': '\\b(BORDER)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # BRK command (ON BRK GOTO)
-    'match': '\\b(BRK)'
-    'name': 'keyword.control.cocobasic'
+  { # BIN function
+    'match': '\\b(BIN)\\b'
+    'name': 'entity.name.function.ts2068basic'
+  }
+  { # BRIGHT command
+    'match': '\\b(BRIGHT)'
+    'name': 'keyword.control.ts2068basic'
+  }
+  { # CAT command
+    'match': '\\b(CAT)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # CHR$ function
     'match': '\\b(CHR(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # CIRCLE command
     'match': '\\b(CIRCLE)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # CLEAR command
     'match': '\\b(CLEAR)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # CLOAD command
-    'match': '\\b(CLOAD)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # CLOADM command
-    'match': '\\b(CLOADM)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # CLOSE command
     'match': '\\b(CLOSE)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # CLS command
     'match': '\\b(CLS)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # COLOR command
-    'match': '\\b(COLOR)'
-    'name': 'keyword.control.cocobasic'
+  { # CODE function
+    'match': '\\b(CODE)\\b'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # CONT command
-    'match': '\\b(CONT)'
-    'name': 'keyword.control.cocobasic'
+  { # CONTINUE command
+    'match': '\\b(CONTINUE)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # CSAVE command
-    'match': '\\b(CSAVE)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # CSAVEM command
-    'match': '\\b(CSAVEM)'
-    'name': 'keyword.control.cocobasic'
+  { # COPY command
+    'match': '\\b(COPY)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # COS function
     'match': '\\b(COS)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # DATA command
     'match': '\\b(DATA)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # DEF command
     'match': '\\b(DEF)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # DEFUSR command
-    'match': '\\b(DEFUSR)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # DEL command
-    'match': '\\b(DEL)'
-    'name': 'keyword.control.cocobasic'
+  { # DELETE command
+    'match': '\\b(DELETE)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # DIM command
     'match': '\\b(DIM)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # DRAW command
     'match': '\\b(DRAW)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # EDIT command
     'match': '\\b(EDIT)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # END command
-    'match': '\\b(END)'
-    'name': 'keyword.control.cocobasic'
+  { # ERASE command
+    'match': '\\b(ERASE)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # EOF function
-    'match': '\\b(EOF)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # ERLIN function
-    'match': '\\b(ERLIN)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # ERNO function
-    'match': '\\b(ERNO)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-
   { # ERR command
     'match': '\\b(ERR)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # EXEC command
-    'match': '\\b(EXEC)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # EXP function
     'match': '\\b(EXP)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # FIX function
-    'match': '\\b(FIX)\\b'
-    'name': 'entity.name.function.cocobasic'
+  { # FLASH command
+    'match': '\\b(FLASH)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # FN function
     'match': '\\b(FN)'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # FOR command
     'match': '\\b(FOR)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # GET command
-    'match': '\\b(GET)'
-    'name': 'keyword.control.cocobasic'
+  { # FORMAT command
+    'match': '\\b(FORMAT)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # GET# command
-    'match': '\\b(GET#)'
-    'name': 'keyword.control.cocobasic'
+  { # FREE function
+    'match': '\\b(FREE)'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # GOSUB command
-    'match': '\\b(GOSUB)'
-    'name': 'keyword.control.cocobasic'
+  { # GO SUB command
+    'match': '\\b(GO SUB)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # GOTO command
-    'match': '\\b(GO(\\s*)?TO)'
-    'name': 'keyword.control.cocobasic'
+  { # GO TO command
+    'match': '\\b(GO TO)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # HEX$ function
-    'match': '\\b(HEX(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
+  { # IF command
+    'match': '\\b(IF)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # HPOINT function
-    'match': '\\b(HPOINT)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # HBUFF command
-    'match': '\\b(HBUFF)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HCIRCLE command
-    'match': '\\b(HCIRCLE)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HCLS command
-    'match': '\\b(HCLS)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HCOLOR command
-    'match': '\\b(HCOLOR)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HDRAW command
-    'match': '\\b(HDRAW)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HGET command
-    'match': '\\b(HGET)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HLINE command
-    'match': '\\b(HLINE)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HPAINT command
-    'match': '\\b(HPAINT)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HPRINT command
-    'match': '\\b(HPRINT)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HPUT command
-    'match': '\\b(HPUT)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HRESET command
-    'match': '\\b(HRESET)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HSCREEN command
-    'match': '\\b(HSCREEN)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HSET command
-    'match': '\\b(HSET)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # HSTAT command
-    'match': '\\b(HSTAT)'
-    'name': 'keyword.control.cocobasic'
+  { # IN function
+    'match': '\\b(IN)\\b'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # INKEY$ function
     'match': '\\b(INKEY(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
-  }
-
-  { # IF command
-    'match': '\\b(IF)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # INPUT command
     'match': '\\b(INPUT)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # INPUT# command
-    'match': '\\b(INPUT#)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # INT function
     'match': '\\b(INT)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # INSTR function
-    'match': '\\b(INSTR)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # JOYSTK function
-    'match': '\\b(JOYSTK)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-
-  { # LEFT$ function
-    'match': '\\b(LEFT(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
+  { # INVERSE command
+    'match': '\\b(INVERSE)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # LEN function
     'match': '\\b(LEN)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # LET command
     'match': '\\b(LET)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # LINE command
     'match': '\\b(LINE)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # LIST command
     'match': '\\b(LIST)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # LLIST command
     'match': '\\b(LLIST)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # LOCATE command
-    'match': '\\b(LOCATE)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # LPOKE command
-    'match': '\\b(LPOKE)'
-    'name': 'keyword.control.cocobasic'
+  { # LN function
+    'match': '\\b(LN)\\b'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # LOAD command
     'match': '\\b(LOAD)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # LOADM command
-    'match': '\\b(LOADM)'
-    'name': 'keyword.control.cocobasic'
+  { # LPRINT command
+    'match': '\\b(LPRINT)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # LOG function
-    'match': '\\b(LOG)\\b'
-    'name': 'entity.name.function.cocobasic'
+  { # MERGE command
+    'match': '\\b(MERGE)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # LPEEK function
-    'match': '\\b(LPEEK)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # MEM function
-    'match': '\\b(MEM)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-
-  { # MID$ function
-    'match': '\\b(MID(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # MOTOR command
-    'match': '\\b(MOTOR)'
-    'name': 'keyword.control.cocobasic'
+  { # MOVE command
+    'match': '\\b(MOVE)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # NEW command
     'match': '\\b(NEW)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # NEXT command
     'match': '\\b(NEXT)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # NOT operator
     'match': '\\b(NOT)'
-    'name': 'keyword.operator.cocobasic'
+    'name': 'keyword.operator.ts2068basic'
   }
   { # ON command
     'match': '\\b(ON)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # OPEN command
     'match': '\\b(OPEN)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # OR operator
     'match': '\\b(OR)'
-    'name': 'keyword.operator.cocobasic'
+    'name': 'keyword.operator.ts2068basic'
   }
-  { # POINT function
-    'match': '\\b(POINT)\\b'
-    'name': 'entity.name.function.cocobasic'
+  { # OVER command
+    'match': '\\b(OVER)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # PALETTE command
-    'match': '\\b(PALETTE)'
-    'name': 'keyword.control.cocobasic'
+  { # PAPER command
+    'match': '\\b(PAPER)'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # PCLEAR command
-    'match': '\\b(PCLEAR)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # PCLS command
-    'match': '\\b(PCLS)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # PCOPY command
-    'match': '\\b(PCOPY)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # PLAY command
-    'match': '\\b(PLAY)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # PMODE command
-    'match': '\\b(PMODE)'
-    'name': 'keyword.control.cocobasic'
+  { # PAUSE command
+    'match': '\\b(PAUSE)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # PEEK function
     'match': '\\b(PEEK)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
+  }
+  { # PI function
+    'match': '\\b(PI)\\b'
+    'name': 'entity.name.function.ts2068basic'
+  }
+  { # PLOT command
+    'match': '\\b(PLOT)'
+    'name': 'keyword.control.ts2068basic'
+  }
+  { # POINT command
+    'match': '\\b(POINT)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # POKE command
     'match': '\\b(POKE)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # POS function
-    'match': '\\b(POS)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # PPOINT function
-    'match': '\\b(PPOINT)\\b'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # PRESET command
-    'match': '\\b(PRESET)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # PRINT command
     'match': '\\b(PRINT)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # PRINT# command
-    'match': '\\b(PRINT#)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # PSET command
-    'match': '\\b(PSET)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # PUT command
-    'match': '\\b(PUT)'
-    'name': 'keyword.control.cocobasic'
+  { # RANDOMIZE command
+    'match': '\\b(RANDOMIZE)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # READ command
     'match': '\\b(READ)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # REM command (comments)
     'match': '(REM.*(\\n|$))'
-    'name': 'comment.line.cocobasic'
+    'name': 'comment.line.ts2068basic'
   }
-  { # RENUM command
-    'match': '\\b(RENUM)'
-    'name': 'keyword.control.cocobasic'
+  { # RESET command
+    'match': '\\b(RESET)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # RESTORE command
     'match': '\\b(RESTORE)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # RETURN command
     'match': '\\b(RETURN)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # RIGHT$ function
-    'match': '\\b(RIGHT(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # RND function
     'match': '\\b(RND)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # RUN command
     'match': '\\b(RUN)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # SAVE command
     'match': '\\b(SAVE)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
-  { # SCREEN command
-    'match': '\\b(SCREEN)'
-    'name': 'keyword.control.cocobasic'
+  { # SCREEN$ function
+    'match': '\\b(SCREEN(\\$|\\b))'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # SET command
-    'match': '\\b(SET)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # SKIPF command
-    'match': '\\b(SKIPF)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # SOUND command
-    'match': '\\b(SOUND)'
-    'name': 'keyword.control.cocobasic'
-  }
-
   { # SGN function
     'match': '\\b(SGN)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # SIN function
     'match': '\\b(SIN)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # SPC function
-    'match': '\\b(SPC)\\b'
-    'name': 'entity.name.function.cocobasic'
+  { # SOUND command
+    'match': '\\b(SOUND)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # SQR function
     'match': '\\b(SQR)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # STEP command
     'match': '\\b(STEP)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
+  }
+  { # STICK command
+    'match': '\\b(STICK)'
+    'name': 'keyword.control.ts2068basic'
   }
   { # STOP command
     'match': '\\b(STOP)'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # STR$ function
     'match': '\\b(STR(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
-  }
-  { # STRING$ function
-    'match': '\\b(STRING(\\$|\\b))'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # TAB function
     'match': '\\b(TAB)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # TAN function
     'match': '\\b(TAN)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # THEN command
     'match': '\\b(THEN)'
-    'name': 'keyword.control.cocobasic'
-  }
-  { # TIMER function
-    'match': '\\b(TIMER)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # TO command
     'match': '\b(TO)\b'
-    'name': 'keyword.control.cocobasic'
+    'name': 'keyword.control.ts2068basic'
   }
   { # USR function
     'match': '\\b(USR)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
   { # VAL function
     'match': '\\b(VAL)\\b'
-    'name': 'entity.name.function.cocobasic'
+    'name': 'entity.name.function.ts2068basic'
   }
-  { # VALPTR function
-    'match': '\\b(VALPTR)\\b'
-    'name': 'entity.name.function.cocobasic'
+  { # VERIFY command
+    'match': '\\b(VERIFY)'
+    'name': 'keyword.control.ts2068basic'
   }
 ]
